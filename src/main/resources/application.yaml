@@ -7,19 +7,20 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
   datasource:
     platform: postgres
-    url: jdbc:postgresql://localhost:5433/psinder
+    url: ${DATABASE_URL}
     username: postgres
     password: postgres
     driverClassName: org.postgresql.Driver
-
 server:
   port: 8096
 
 eureka:
   client:
     registerWithEureka: true
-    fetchRegistry: true
+    fetchRegistry: false
     serviceUrl:
-      defaultZone: ${EUREKA_URI:http://localhost:8091/eureka}
+      defaultZone: ${EUREKA_URL:https://psinder-eureka.herokuapp.com}/eureka/
   instance:
-    preferIpAddress: true
+    preferIpAddress: false
+    nonSecurePort: 80
+    hostname: ${DOMAIN_NAME:psinder-maps.herokuapp.com/}

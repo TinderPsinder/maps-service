@@ -17,8 +17,10 @@ server:
 eureka:
   client:
     registerWithEureka: true
-    fetchRegistry: true
+    fetchRegistry: false
     serviceUrl:
-      defaultZone: ${EUREKA_URL}
+      defaultZone: ${EUREKA_URL:https://psinder-eureka.herokuapp.com}/eureka/
   instance:
-    preferIpAddress: true
+    preferIpAddress: false
+    nonSecurePort: 80
+    hostname: ${DOMAIN_NAME:psinder-maps.herokuapp.com/}

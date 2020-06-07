@@ -1,4 +1,4 @@
-package pl.zimny.rest;
+package pl.zimny.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
