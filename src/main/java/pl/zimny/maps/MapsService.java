@@ -1,4 +1,4 @@
-package pl.zimny.service;
+package pl.zimny.maps;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
