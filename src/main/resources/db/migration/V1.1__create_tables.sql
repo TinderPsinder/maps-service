@@ -30,5 +30,5 @@ CREATE TABLE maps.locations (
     id integer PRIMARY KEY,
     dogId integer NOT NULL,
     lat text NOT NULL,
-    lng text NOT NULL,
+    lng text NOT NULL
 );
