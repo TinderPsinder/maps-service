@@ -4,6 +4,10 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import pl.zimny.model.Location;
+import pl.zimny.service.MapsService;
+
+import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
@@ -17,8 +21,8 @@ public class MapsRestEndpoint {
         return "Hello from maps service";
     }
 
-    @GetMapping(path = "/closest")
-    public HttpStatus getClosestUsers(){
-       return mapsService.getClosestUsers();
+    @GetMapping(path = "/locations")
+    public List<Location> getAllLocations(){
+       return mapsService.getAllLocations();
     }
 }
