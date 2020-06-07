@@ -20,7 +20,7 @@ public class Location {
     protected Long id;
 
     @Column(name = "dogId")
-    Integer dogId;
+    Integer dogid;
 
     @Column
     String lat;
@@ -28,8 +28,8 @@ public class Location {
     @Column
     String lng;
 
-    public Location(Integer dogId, String lat, String lng) {
-        this.dogId = dogId;
+    public Location(Integer dogid, String lat, String lng) {
+        this.dogid = dogid;
         this.lat = lat;
         this.lng = lng;
     }
