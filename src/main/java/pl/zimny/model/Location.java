@@ -19,7 +19,7 @@ public class Location {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected Long id;
 
-    @Column
+    @Column(name = "dogId")
     Integer dogId;
 
     @Column
